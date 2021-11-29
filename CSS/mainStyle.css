@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+/*navBar style*/
+.navbar .nav-link {
+    color: #fff !important;
+}
+.navbar{
+    background-color: #000000ad;
+    align-content: start;
+    height: 77px;
+}
+.navbar-overlay{
+    background-color: #8a3737ad;
+    align-content: start;
+    height: 77px;
+}
+.navbar-nav{
+    padding-left: 55px;
+}
+.navbar-brand{
+    height: 50px;
+    top: 0px;
+    z-index: 1;
+    text-shadow: #444444;    
+}
+.navbar-collapse{
+    z-index: 2;
+}
+/* when the navbar is collapsed */
+@media (max-width: 992px) {
+    .navbar-brand , img{
+        height: 77px;
+        
+    }
+    .navbar-bg {       
+        position: absolute;
+        width: 50%;
+        top: 77px;
+        right: 0px;
+        background-color: #444444;
+    }
+}    
+
+body {
+    max-width: 1280px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 100%;
+    font-size: 18px;
+}
+
+#intro {
+    background-image: url("../ressources/bg-intro.jpg") ;
+    position: absolute;
+    top: 0px;
+    left:0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    z-index: -100;
+  }
+  
+.intro-text{
+    position: absolute;
+    max-width: 1280px;
+    height: calc(100vh - 77px);
+    
+}
+
+/*Cards*/
+.card img{
+    object-fit: cover;
+    height: 200px;
+    width:100%;
+}
+
+.card-body{
+    height: 350px;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/*main*/
+main{
+    position: relative;
+    max-width: 1280px;
+}
+
+/*tools*/
+.align-right{
+    display: flex;
+    float: right;
+}
+.align-left{
+    display: flex;
+    float: left;
+}
+.shadowBox{
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.493);
+}
+
+.bg-orange{
+    background-color: #f37400;
+}
+
+/* Font syles */
+.h1{
+    height: 108px; 
+    font-family: "Fira Sans"; 
+    font-weight: 600; 
+    font-style: normal;
+}
+
+.p{
+    height: 252px; 
+    font-family: Catamaran; 
+    font-weight: normal; 
+    font-style: normal;
+}
+
+ a{
+    font-size: 1em; 
+}
+
+/*offset on anchor*/
+[id]::before {
+    content: '';
+    display: block;
+    height:      75px;
+    margin-top: -75px;
+    visibility: hidden;
+  }
+
+.form-rounded {
+    width: 193px;
+    height: 36px;
+    background: #EDEDED;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+
+.breadcrumb-container{
+    background-color: #DBE4EE;
+    height: 52px;
+    padding-left: 20px;
+}
+
+.breadcrumb{
+    margin-left: 160px;
+    height: 20px;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    /*color: #F17300;*/
+    /*background-color: #F17300;*/
+}
+
+/*  
+#054A91
+#3E7CB1
+#81A4CD
+#DBE4EE
+#F17300
+
+
+*/

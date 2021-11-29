@@ -1,0 +1,123 @@
+
+liste de fichier :
+ls -l
+
+initialiser un dépot :
+git init
+
+
+git status
+
+ajout a la zone staging
+git add
+annuler une modif 
+git restore
+
+deplacer un fichier
+git mv
+
+supprimer un fichier
+git rm
+
+comparer des fichier
+git diff
+
+si déja ajouté au staging 
+utiliser "cached"
+
+git reset --hard origin/master afin de remettre le répertoire dans son état
+
+Initialisez un fichier .gitignore permettant d ignorer les éléments suivants :
+On souhaite ignorer tous les fichiers .txt
+Le fichier important.txt ne doit pas être ignoré
+Le répertoire /vendors doit être ignoré
+Les fichiers .pdf situés dans le répertoire uploads doivent être ignorés
+
+# On ignore les fichiers .txt
+*.txt
+
+# On conserve important.txt
+!important.txt
+
+# On ignore le répertoire /vendors
+vendors/
+
+# On ignore les fichiers pdf du répertoire uploads
+uploads/**/*.pdf
+
+
+$ ls -R -1
+.:
+ignore.txt
+important.txt
+README
+uploads/
+vendors/
+
+./uploads:
+file.docx
+file.pdf
+
+./vendors:
+vendor
+
+
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        important.txt
+        uploads/
+
+
+
+git diff nom_du_fichier permet de comparer 2 fichiers
+git diff --color-words pareil mais avec des couleurs
+si le fichier a été staged, faire 
+git diff --staged
+
+resultat type :
+$ git diff README.md
+diff --git a/README.md b/README.md
+index 38731d3..1e078fc 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,3 @@
+ Initialisation du fichier
++
++Ajout d une nouvelle ligne
+
+////////////////
+le répertoire documentation est mal nommé, une faute de frappe a été oubliée 
+et il a été nommé "docmentation".
+Déplacez ce répertoire à l aide de la commande git mv et commitez vos modifications après avoir vérifié 
+le contenu de votre zone de staging grâce à la commande git status.
+
+$ git mv docmentation documentation
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    docmentation/documentation.md -> documentation/documentation.md
+
+$ git commit -m "MISC: Move documentation directory"
+
+
+
+Modifiez le fichier README.md en y ajoutant une nouvelle ligne "Ajout d'une nouvelle ligne".
+Effectuez les manipulations de vérifications et d ajouts nécessaires au bon processus de validation 
+des modifications : 
+vérification des modifications apportées, état de la zone de staging, ajout à la zone de staging.
+Commitez les modifications apportées avec le message suivant "DOC : Update README file".
+On vérifie également quelles modifications ont été apportées :
+$ git diff
+diff --git a/README.md b/README.md
+
+On ajoute le fichier
+$ git add README.md
+On commit les modifications :
+$ git commit -m "DOC : Update README file"
